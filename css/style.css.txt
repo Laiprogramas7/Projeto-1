@@ -1,0 +1,126 @@
+body {
+    font-family: Optima, sans-serif;
+    background-color:#FFE5CC;
+    color: #6D4C41;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #FFD1A4;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6D4C41;
+    font-weight: bold;
+}
+
+/* Estilos principais */
+.main {
+    text-align: center;
+    padding: 40px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 1px solid #6D4C41;
+}
+
+/* Container para os produtos */
+.product-container {
+    displays: flex;
+    flex-wrap: wrap; /* Permite que os produtos "quebrem" para a linha em telas menores */
+    justify-content: center; /* Centraliza os produtos*/
+    gap: 20px; /* Espaço entre os produtos */
+}
+
+.product-display {
+    width: 250px; /* Largura fica para os produtos */
+    text-align: center;
+    background-color: #fff; /* Fundo branco para cada produto */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para o produto */
+}
+
+.product-display img {
+    width: 100%; /* Imagem ocupa toda a largura do produto */
+    max-width: 200px; /* Limita o tamanho máximo da imagem */
+    border-radius: 10px;
+}
+
+.buy-btn {
+    background-color: #FF7F50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFD1A4;
+    margin-top: 20px;
+}
+
+/* Responsavidade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .product-container {
+        flex-direction: column; /* Coloca os produtos um embaixo do outro */
+        align-items: center;
+    }
+
+    .product-display {
+        width: 100%; /* Ajusta a imagem para o tamanho da tela */
+        max-width: 300px; /* Limita o tamanho máximo da imagem */
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 100%
+    }
+}
